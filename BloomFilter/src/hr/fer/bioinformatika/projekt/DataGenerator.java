@@ -16,12 +16,13 @@ public class DataGenerator {
 	 *            minimum length of a single key.
 	 * @param maxLength
 	 *            maximum length of a single key.
+	 * @param rand
+	 *            random number generator.
 	 * @param outputPath
 	 *            path where the new key list will be saved.
 	 */
 	public static void generateKeyList(int numOfKeys, int minLength,
-			int maxLength, String outputPath) {
-		Random rand = new Random();
+			int maxLength, String outputPath, Random rand) {
 		int interval = maxLength - minLength;
 
 		try (BufferedWriter w = new BufferedWriter(new FileWriter(outputPath))) {
